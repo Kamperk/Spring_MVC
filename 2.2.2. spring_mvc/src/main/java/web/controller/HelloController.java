@@ -3,7 +3,8 @@ package web.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,5 +21,24 @@ public class HelloController {
 		model.addAttribute("messages", messages);
 		return "index";
 	}
-	
+
+	@GetMapping(value="/cars")
+	public String getCar(@RequestParam(value = "count",required = false) int count, ModelMap model){
+		List<Car> cars = new ArrayList<>();
+		cars.add(new Car(313,1,"Lada"));
+		cars.add(new Car(41,2,"Ford"));
+		cars.add(new Car(3123,3,"Nissan"));
+		cars.add(new Car(3432,4,"Infinity"));
+		cars.add(new Car(4313,5,"Lexus"));
+		List<Car> result = new ArrayList<>();
+		if(count>0 && count<6) {
+			for (int i = 0; i < count; i++) {
+				result.add(cars.get(i));
+			}
+			model.addAttribute("result", result);
+		}
+		else
+			model.addAttribute("result", cars);
+		return "cars";
+	}
 }
