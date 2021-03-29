@@ -18,7 +18,7 @@ public class CarDao {
         cars.add(new Car(3432,4,"Infinity"));
         cars.add(new Car(4313,5,"Lexus"));
     }
-    public List<Car> getCar(){
-        return cars;
+    public List<Car> getCar(int count){
+        return cars.subList(0,count);
     }
 }

@@ -30,7 +30,7 @@ public class HelloController {
 
 	@GetMapping(value="/cars")
 	public String getCar(@RequestParam(value = "count",required = false) int count, ModelMap model){
-		model.addAttribute("result",carService.getCar().subList(0,count));
+		model.addAttribute("result",carService.getCar(count));
 		return "cars";
 	}
 }
