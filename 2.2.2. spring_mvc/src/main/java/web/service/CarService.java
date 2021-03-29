@@ -10,7 +10,7 @@ import java.util.List;
 public class CarService {
 
     @Autowired
-    CarDao carDao;
+    private CarDao carDao;
 
     public List<Car> getCar(int count){
         return carDao.getCar(count);
