@@ -1,16 +1,22 @@
 package web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import web.DAO.CarDao;
 import web.model.Car;
+import web.service.CarService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class HelloController {
+
+	@Autowired
+	private CarService carService;
 
 	@GetMapping(value = "/")
 	public String printWelcome(ModelMap model) {
@@ -24,21 +30,7 @@ public class HelloController {
 
 	@GetMapping(value="/cars")
 	public String getCar(@RequestParam(value = "count",required = false) int count, ModelMap model){
-		List<Car> cars = new ArrayList<>();
-		cars.add(new Car(313,1,"Lada"));
-		cars.add(new Car(41,2,"Ford"));
-		cars.add(new Car(3123,3,"Nissan"));
-		cars.add(new Car(3432,4,"Infinity"));
-		cars.add(new Car(4313,5,"Lexus"));
-		List<Car> result = new ArrayList<>();
-		if(count>0 && count<6) {
-			for (int i = 0; i < count; i++) {
-				result.add(cars.get(i));
-			}
-			model.addAttribute("result", result);
-		}
-		else
-			model.addAttribute("result", cars);
+		model.addAttribute("result",carService.getCar().subList(0,count));
 		return "cars";
 	}
 }

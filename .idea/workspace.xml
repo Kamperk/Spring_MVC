@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1f37621-2783-4b28-b722-0e3b789b9a41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/2.2.2. spring_mvc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2.2.2. spring_mvc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.2.2. spring_mvc/src/main/java/web/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.2.2. spring_mvc/src/main/java/web/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.2.2. spring_mvc/web/WEB-INF/web.xml" beforeDir="false" />
+    <list default="true" id="d1f37621-2783-4b28-b722-0e3b789b9a41" name="Default Changelist" comment="Tomcat">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -329,8 +332,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616656398961</updated>
-      <workItem from="1616656400309" duration="47553000" />
+      <workItem from="1616656400309" duration="48933000" />
     </task>
+    <task id="LOCAL-00001" summary="Tomcat">
+      <created>1616826936192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616826936201</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tomcat">
+      <created>1616827002104</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616827002104</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,5 +364,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tomcat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tomcat" />
   </component>
 </project>
